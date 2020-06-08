@@ -5,6 +5,21 @@ import matplotlib.pyplot as plt
 
 # read the data
 df=pd.read_csv('Data_day1.csv')
+# dataframe slicing
+#*****iloc[row,col] is integer based slicing*****
+# print(df.iloc[2]) # 2nd row and all column
+# print(df.iloc[2,:]) # 2nd row same as above
+# print(df.iloc[:,2]) # 2nd column
+# print(df.iloc[0:2,2]) # 2nd column and 0:2 rows
+# print(df.iloc[0:2,:]) # 0:2 row
+# print(df.iloc[[1,3,5],[2,3]]) # list wise slicing
+
+#*****loc[index(rows):name of columns] name based slicing*****
+#*****iloc[row,col] is integer based slicing*****
+# print(df.loc[[1,3,5],['Age','Salary']])
+# print(df.loc[df['Age'].isin([27.0,27.5,38,35,40])])
+# print(df.loc[df['Age']>=30])
+
 # # Preprocessing:
 # print('name of columns = ',df.columns)
 # print('overall shape of dataframe ',df.shape)
@@ -16,8 +31,8 @@ df=pd.read_csv('Data_day1.csv')
 # print('variance = ', df.var())
 
 # 2. Data visualization: Histogram : to see the data distribution
-plt.hist=df.hist(bins=3)
-plt.show()
+# plt.hist=df.hist(bins=3)
+# plt.show()
 
 # 3. missing data: there are two ways (1) delete that raw (2) use mean variance to assign value
 
