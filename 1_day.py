@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 df=pd.read_csv('Data_day1.csv')
 # dataframe slicing
 #*****iloc[row,col] is integer based slicing*****
-# print(df.iloc[2]) # 2nd row and all column
-# print(df.iloc[2,:]) # 2nd row same as above
+print(df.iloc[2]['Age']) # 2nd row with info
+print(df.iloc[2,:].values) # 2nd row same as above but values in numpy array
 # print(df.iloc[:,2]) # 2nd column
 # print(df.iloc[0:2,2]) # 2nd column and 0:2 rows
 # print(df.iloc[0:2,:]) # 0:2 row
